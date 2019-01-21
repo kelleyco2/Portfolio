@@ -6,17 +6,34 @@
 -->
 <html>
 	<head>
-		<title>Untitled</title>
+		<title>Cooper Kelley</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="images/CK.png">
+		<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.1.0/email.min.js"></script>
+		<script type="text/javascript">
+			(function(){
+			   emailjs.init("user_BWy2uAuwpPsKjti1WLxgV");
+			})();
+		</script>
+		<script type="text/javascript">
+			window.onload = function() {
+				document.getElementById('contact-form').addEventListener('submit', function(event) {
+					event.preventDefault();
+					// this.contact_number.value = Math.random() * 100000 | 0;
+					emailjs.sendForm('contact_service', 'contact_form', this);
+				});
+			}
+		</script>
+
 	</head>
 	<body class="is-preload">
 
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/Screen Shot 2018-07-25 at 11.15.56 AM.png" alt="" /></a>
+					<a href="index.html" class="image avatar"><img src="images/Screen Shot 2018-07-25 at 11.15.56 AM.png" alt="" /></a>
 					<h1><strong>Cooper Kelley</strong><br />
 					Web Developer<br />
 					UX Designer<br />
@@ -32,14 +49,80 @@
 						<header class="major">
 							<h2>About Me</h2>
 						</header>
-						<p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
+						<div class="acronym">
+							<h1>C</h1><p>reative</p>
+						</div>
+						<div class="acronym">
+							<h1>O</h1><p>ne</p>
+						</div>
+						<div class="acronym">
+							<h1>O</h1><p>ffering</p>
+						</div>
+						<div class="acronym">
+							<h1>P</h1><p>eople</p>
+						</div>
+						<div class="acronym">
+							<h1>E</h1><p>xtraordinary</p>
+						</div>
+						<div class="acronym">
+							<h1>R</h1><p>esults</p>
+						</div>
 					</section>
 
 					<section id="one">
 						<header class="major">
 							<h2>Skills</h2>
 						</header>
-						<p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
+						<div class="skillsContainer">
+							<div class="skill">
+								<img src="./images/skills/react.png" alt="react icon" width="100px" height="100px">
+								<h2>React</h2>
+							</div>
+							<div class="skill">
+								<img src="./images/skills/redux.svg" alt="redux icon" width="100px" height="100px">
+								<h2>Redux</h2>
+							</div>
+							<div class="skill">
+								<img src="./images/skills/node.png" alt="node icon" width="100px" height="100px">
+								<h2>Node</h2>
+							</div>
+							<div class="skill">
+								<img src="./images/skills/express.png" alt="express icon" width="100px" height="100px">
+								<h2>Express</h2>
+							</div>
+							<div class="skill">
+								<img src="./images/skills/postgresql.png" alt="postgresql icon" width="100px" height="100px">
+								<h2>PostgreSQL</h2>
+							</div>
+							<div class="skill">
+								<img src="./images/skills/js.png" alt="JavaScript icon" width="100px" height="100px">
+								<h2>JavaScript</h2>
+							</div>
+							<div class="skill">
+								<img src="./images/skills/html5.png" alt="html5 icon" width="100px" height="100px">
+								<h2>HTML5</h2>
+							</div>
+							<div class="skill">
+								<img src="./images/skills/css3.png" alt="css3 icon" width="100px" height="100px">
+								<h2>CSS3</h2>
+							</div>
+							<div class="skill">
+								<img src="./images/skills/jest.png" alt="jest icon" width="100px" height="100px">
+								<h2>Jest</h2>
+							</div>
+							<div class="skill">
+								<img src="./images/skills/git.png" alt="git icon" width="100px" height="100px">
+								<h2>Git</h2>
+							</div>
+							<div class="skill">
+								<img src="./images/skills/github.png" alt="github icon" width="100px" height="100px">
+								<h2>Github</h2>
+							</div>
+							<div class="skill">
+								<img src="./images/skills/sketch.jpeg" alt="sketch icon" width="100px" height="100px">
+								<h2>Sketch</h2>
+							</div>
+						</div>
 					</section>
 
 				<!-- Two -->
@@ -49,22 +132,34 @@
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/mariakelleybeauty.png" class="image fit thumb"><img src="images/Small Lashes.png" alt="" /></a>
 								<h3>Maria Kelley Beauty</h3>
-								<p>DevMountain Web Development Solo Project</p>
+								<p>DevMountain Web Development Solo Project</p><br/>
+								<ul class="actions">
+									<li><a href="MariaKelleyBeauty.html" class="button">Learn More</a></li>
+								</ul>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/Screen Shot 2019-01-18 at 12.05.23 PM.png" class="image fit thumb"><img src="images/Screen Shot 2019-01-18 at 12.05.23 PM.png" alt="" /></a>
 								<h3>The Club</h3>
-								<p>DevMountain Web Development Group Project</p>
+								<p>DevMountain Web Development Group Project</p><br/>
+								<ul class="actions">
+									<li><a href="TheClub.html" class="button">Learn More</a></li>
+								</ul>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/RRC.png" class="image fit thumb"><img src="images/Small RRC.png" alt="" /></a>
 								<h3>Remote Refugee Coaching</h3>
-								<p>DevMountain UX Design Project</p>
+								<p>DevMountain UX Design Project</p><br/>
+								<ul class="actions">
+									<li><a href="RRC.html" class="button">Learn More</a></li>
+								</ul>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/Trendr.png" class="image fit thumb"><img src="images/Trendr.png" alt="" /></a>
 								<h3>Trendr</h3>
-								<p>DevMountain UX Design Project</p>
+								<p>DevMountain UX Design Project</p><br/>
+								<ul class="actions">
+									<li><a href="Trendr.html" class="button">Learn More</a></li>
+								</ul>
 							</article>
 						</div>
 					</section>
@@ -75,11 +170,11 @@
 						<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
 						<div class="row">
 							<div class="col-8 col-12-small">
-								<form method="post" action="#">
+								<form method="post" action="#" id="contact-form">
 									<div class="row gtr-uniform gtr-50">
-										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+										<div class="col-6 col-12-xsmall"><input type="text" name="user_name" id="name" placeholder="Name" /></div>
+										<div class="col-6 col-12-xsmall"><input type="email" name="user_email" id="email" placeholder="Email" /></div>
+										<div class="col-12"><textarea name="text" id="message" placeholder="Message" rows="4"></textarea></div>
 									</div>
 								</form>
 								<ul class="actions">

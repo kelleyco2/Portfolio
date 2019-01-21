@@ -229,6 +229,29 @@ input, select, textarea {
 			overflow-x: auto;
 		}
 
+	.skillsContainer {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	.skill {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-right: 60px;
+	}
+
+	.acronym {
+		display: flex;
+		align-items: center;
+	}
+
+	.acronym h1 {
+		margin-right: 8px;
+	}
+
 	.align-left {
 		text-align: left;
 	}
