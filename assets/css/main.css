@@ -243,13 +243,22 @@ input, select, textarea {
 		margin-right: 60px;
 	}
 
+	.acronymContainer {
+		display: flex;
+	}
+
 	.acronym {
 		display: flex;
+		/* justify-content: space-around; */
 		align-items: center;
 	}
 
+	.acronym p {
+		margin-right: 12px;
+	}
+
 	.acronym h1 {
-		margin-right: 8px;
+		margin-right: 4px;
 	}
 
 	.align-left {
