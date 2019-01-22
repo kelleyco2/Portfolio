@@ -10,7 +10,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" href="images/CK.png">
+		<link rel="icon" href="images/icongray.png">
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 		<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.1.0/email.min.js"></script>
 		<script type="text/javascript">
 			(function(){
@@ -19,11 +20,17 @@
 		</script>
 		<script type="text/javascript">
 			window.onload = function() {
+				$('#sent').hide()
 				document.getElementById('contact-form').addEventListener('submit', function(event) {
 					event.preventDefault();
 					// this.contact_number.value = Math.random() * 100000 | 0;
-					emailjs.sendForm('contact_service', 'contact_form', this);
-				});
+					emailjs.sendForm('contact_service', 'contact_from', '#contact-form').then(function(response) {
+						console.log('SUCCESS!', response.status, response.text);
+						$('#sent').show()
+						}, function(error) {
+						console.log('FAILED...', error);
+						});
+					});
 			}
 		</script>
 
@@ -167,7 +174,7 @@
 				<!-- Three -->
 					<section id="three">
 						<h2>Get In Touch</h2>
-						<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
+						<p>I'd love to hear from you!</p>
 						<div class="row">
 							<div class="col-8 col-12-small">
 								<form method="post" action="#" id="contact-form">
@@ -175,11 +182,12 @@
 										<div class="col-6 col-12-xsmall"><input type="text" name="user_name" id="name" placeholder="Name" /></div>
 										<div class="col-6 col-12-xsmall"><input type="email" name="user_email" id="email" placeholder="Email" /></div>
 										<div class="col-12"><textarea name="text" id="message" placeholder="Message" rows="4"></textarea></div>
-									</div>
+									</div><br/>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" /></li>
+										<li id="sent">Message Sent!</li>
+									</ul>
 								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
 							</div>
 							<div class="col-4 col-12-small">
 								<ul class="labeled-icons">
@@ -526,7 +534,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 						<li><a href="mailto:kelleyco2@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
 					</ul>
 					<ul class="copyright">
-						<li>&copy; Untitled</li>
+						<li>&copy; Cooper Kelley 2019</li>
 					</ul>
 				</div>
 			</footer>

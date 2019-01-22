@@ -264,6 +264,16 @@ input, select, textarea {
 		text-align: right;
 	}
 
+	#sent {
+		display: flex;
+		align-items: center;
+		color: #4ABD9B;
+	}
+
+	#mkb {
+		border: 1px solid black;
+	}
+
 /* Container */
 
 	.container {
@@ -2051,7 +2061,7 @@ input, select, textarea {
 			-webkit-transition: opacity 0.2s ease-in-out;
 			-ms-transition: opacity 0.2s ease-in-out;
 			transition: opacity 0.2s ease-in-out;
-			background: url("images/overlay.png");
+			/* background: url("images/overlay.png"); */
 			border-radius: 0.35em;
 			content: '';
 			display: block;

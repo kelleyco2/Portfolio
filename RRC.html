@@ -11,6 +11,28 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="icon" href="images/CK.png">
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.1.0/email.min.js"></script>
+		<script type="text/javascript">
+			(function(){
+			   emailjs.init("user_BWy2uAuwpPsKjti1WLxgV");
+			})();
+		</script>
+		<script type="text/javascript">
+			window.onload = function() {
+				$('#sent').hide()
+				document.getElementById('contact-form').addEventListener('submit', function(event) {
+					event.preventDefault();
+					// this.contact_number.value = Math.random() * 100000 | 0;
+					emailjs.sendForm('contact_service', 'contact_from', '#contact-form').then(function(response) {
+						console.log('SUCCESS!', response.status, response.text);
+						$('#sent').show()
+						}, function(error) {
+						console.log('FAILED...', error);
+						});
+					});
+			}
+		</script>
 
 	</head>
 	<body class="is-preload">
@@ -31,25 +53,25 @@
 
 				<!-- One -->
                 <section>
-                        <h4>Image</h4>
-                        <h5>Fit</h5>
+                        <h1>Remote Refugee Coaching</h1>
+						<a href="https://medium.com/@kelleyco2/ui-ux-case-study-remote-refugee-coaching-d87778515d68" target="_blank">
+							<h3>UX Case Study On Medium</h3>
+						</a><br/>
                         <div class="box alt">
                             <div class="row gtr-50 gtr-uniform">
-                                <div class="col-12"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
-                                <div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-                                <div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-                                <div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-                                <div class="col-4"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
-                                <div class="col-4"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
-                                <div class="col-4"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
-                                <div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-                                <div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-                                <div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
+                                <div class="col-12"><span class="image fit"><img src="images/RRC.png" alt="" /></span></div>
+                                <div class="col-12"><span class="image fit"><img src="images/Refugees1.JPG" alt="" /></span></div>
+                                <div class="col-12"><span class="image fit"><img src="images/Refugees2.JPG" alt="" /></span></div>
+                                <div class="col-12"><span class="image fit"><img src="images/RRC Mobile.jpeg" alt="" /></span></div>
+                                <div class="col-12"><span class="image fit"><img src="images/RRC Mobile2.jpeg" alt="" /></span></div>
                             </div>
                         </div>
                         <h5>Left &amp; Right</h5>
                         <p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-                        <p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+						<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+						<ul class="actions">
+							<li><a href="index.html" class="button">Back To Home</a></li>
+						</ul>
                     </section>
 
 					
@@ -57,19 +79,20 @@
 				<!-- Three -->
 					<section id="three">
 						<h2>Get In Touch</h2>
-						<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
+						<p>I'd love to hear from you!</p>
 						<div class="row">
 							<div class="col-8 col-12-small">
-								<form method="post" action="#">
-									<div class="row gtr-uniform gtr-50">
-										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-									</div>
-								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
+									<form method="post" action="#" id="contact-form">
+										<div class="row gtr-uniform gtr-50">
+											<div class="col-6 col-12-xsmall"><input type="text" name="user_name" id="name" placeholder="Name" /></div>
+											<div class="col-6 col-12-xsmall"><input type="email" name="user_email" id="email" placeholder="Email" /></div>
+											<div class="col-12"><textarea name="text" id="message" placeholder="Message" rows="4"></textarea></div>
+										</div><br/>
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" /></li>
+											<li id="sent">Message Sent!</li>
+										</ul>
+									</form>
 							</div>
 							<div class="col-4 col-12-small">
 								<ul class="labeled-icons">
@@ -416,7 +439,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 						<li><a href="mailto:kelleyco2@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
 					</ul>
 					<ul class="copyright">
-						<li>&copy; Untitled</li>
+						<li>&copy; Cooper Kelley 2019</li>
 					</ul>
 				</div>
 			</footer>
