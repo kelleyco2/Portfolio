@@ -283,6 +283,10 @@ input, select, textarea {
 		border: 1px solid black;
 	}
 
+	.imageDescription {
+		text-align: center;
+	}
+
 /* Container */
 
 	.container {
