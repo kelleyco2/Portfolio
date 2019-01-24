@@ -293,6 +293,21 @@ input, select, textarea {
 		margin-bottom: 8px;
 	}
 
+	.aboutMe {
+		line-height: 1.5;
+		letter-spacing: 1.1px;
+	}
+
+	.personal {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	.personal img {
+		border-radius: 5px;
+	}
+
 /* Container */
 
 	.container {
@@ -3224,9 +3239,9 @@ input, select, textarea {
 				padding: 4.5em 1.5em;
 			}
 
-				#header h1 br {
-					/* display: none; */
-				}
+				/* #header h1 br {
+					display: none;
+				} */
 
 		/* Footer */
 
